@@ -1,0 +1,110 @@
+.project {
+    background-color: rgba(0, 0, 0, 0.16);
+    border-radius: .8rem;
+    margin-bottom: 3.2rem;
+}
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.project-content {
+    padding: 2.4rem;
+}
+
+.project-title {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.1rem;
+    line-height: 3.15rem;
+    margin-bottom: .8rem;
+}
+
+.project-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: .8;
+    margin-bottom: 2.4rem;
+}
+
+.project-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project:hover .project-social {
+    display: flex;
+}
+
+.social-actions {
+    display: flex;
+    align-items: center;
+}
+
+.action {
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.action:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.action:active {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.action img {
+    margin-right: 1rem;
+}
+
+/* .action.liked img {
+
+} */
+
+.project-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-photo {
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    margin-right: .8rem;
+}
+
+.author-name::before {
+    content: "@";
+}
+
+
+@media screen and (min-width: 1024px) {
+    .projects {
+        grid-column: 2 / 4;
+        display: grid;
+        grid-template-columns: repeat(2, calc((100% / 2) - 1.2rem));
+        gap: 2.4rem;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .project-social {
+        display: none;
+    }
+
+    .project:hover .project-social {
+        display: flex;
+    }
+}

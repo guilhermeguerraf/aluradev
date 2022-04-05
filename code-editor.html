@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alura Dev - Editor de Código</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="styles/dracula.css" rel="stylesheet">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/code-editor.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="images/logo.svg" alt="Logo Alura Dev">
+        </a>
+
+        <input type="text" class="input" placeholder="Busque por algo">
+        
+        <div class="header-buttons">
+            <button class="button-icon"><img src="images/icon_search.svg" alt="Botão para pesquisa" ></button>
+            <button class="button-icon"><img src="images/icon_open_menu.svg" alt="Botão para abrir menu" ></button>
+        </div>
+        
+        <div class="user">
+            <img src="images/author-photo.jpg" alt="Foto do Autor" class="user-photo">
+            <span class="user-name">Harry</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h3 class="section-title">Menu</h3>
+            <nav>
+                <a href="code-editor.html" class="menu-item active">
+                    <img src="images/icon_code.svg" alt="Ícone">
+                    Editor de código
+                </a>
+                <a href="community.html" class="menu-item">
+                    <img src="images/icon_users.svg" alt="Ícone">
+                    Comunidade
+                </a>
+            </nav>
+        </section>
+
+        <section class="code-editor">
+            <div class="code-editor-bg" id="bg">
+                <div class="code-editor-window">
+                    <div class="ball red"></div>
+                    <div class="ball yellow"></div>
+                    <div class="ball green"></div>
+                    
+                    <div class="wrapper-code">
+                        <code class="code-area" contenteditable="true" aria-label="Editor de código">Comece a digitar aqui...</code>
+                    </div>
+                </div>
+            </div>
+            <button class="highlight-button">Visualizar com o highlight</button>
+        </section>
+
+        <section class="project-menu">
+            <section class="project-info">
+                <h3 class="section-title">Seu projeto</h3>
+                <input type="text" class="input" placeholder="Nome do seu projeto">
+                <textarea name="" id="" class="input" cols="29" rows="2" placeholder="Descrição do seu projeto"></textarea>
+            </section>
+    
+            <section class="project-custom">
+                <h3 class="section-title">Personalização</h3>
+                <div class="container">
+                    <select name="" id="" class="input language">
+                        <option value="" selected>Selecione uma linguagem</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="go">Go</option>
+                    </select>
+                    <div class="input project-bgcolor-input">
+                        <input type="color" name="" id="" class="color-input" value="#6BD1FF">
+                    </div>
+                </div>
+            </section>
+
+            <button class="save-button">Salvar projeto</button>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
